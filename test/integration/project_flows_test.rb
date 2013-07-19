@@ -20,4 +20,19 @@ class ProjectFlowsTest < ActionDispatch::IntegrationTest
 
  end
 
+ test "navigation" do
+
+ 	visit "/"
+
+ 	assert_equal root_path, current_path
+
+ 	assert_equal "Home", find('.navbar ul li.active a').text
+
+ 	find('.navbar ul').click_link('Projects')
+
+ 	assert_equal projects_path, current_path
+
+ 	assert_equal "Projects", find('.navbar ul li.active a').text
+ end
+
 end
