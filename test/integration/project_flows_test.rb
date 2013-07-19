@@ -18,6 +18,12 @@ class ProjectFlowsTest < ActionDispatch::IntegrationTest
 	assert page.has_content?('Project 2')
 	assert page.has_content?('Project 3')
 
+	click_link 'Project 1'
+
+	assert_equal project_path(project1), current_path
+
+	assert find('h1:first').has_content? project1.title
+
  end
 
  test "navigation" do
