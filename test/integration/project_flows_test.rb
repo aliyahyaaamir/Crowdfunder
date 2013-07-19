@@ -3,7 +3,7 @@ require 'test_helper'
 class ProjectFlowsTest < ActionDispatch::IntegrationTest
 
  test "browsing projects" do
-	project1 = FactoryGirl.create(:project, :title => "Project1")
+	project1 = FactoryGirl.create(:project, :title => "Project 1")
 	project2 = FactoryGirl.create(:project, :title => "Project 2")
 	project3 = FactoryGirl.create(:project, :title => "Project 3")
 
