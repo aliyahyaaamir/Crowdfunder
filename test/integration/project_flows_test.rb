@@ -42,7 +42,6 @@ class ProjectFlowsTest < ActionDispatch::IntegrationTest
 
  	assert_equal "Projects", find('.navbar ul li.active a').text
 
- 	visit "/projects"
  	click_link 'Project 1'
  	assert_equal "Projects", find('.navbar ul li.active a').text
  end
