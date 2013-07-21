@@ -28,6 +28,8 @@ class ProjectFlowsTest < ActionDispatch::IntegrationTest
 
  test "navigation" do
 
+ 	project1 = FactoryGirl.create(:project, :title => "Project 1")
+
  	visit "/"
 
  	assert_equal root_path, current_path
@@ -38,6 +40,10 @@ class ProjectFlowsTest < ActionDispatch::IntegrationTest
 
  	assert_equal projects_path, current_path
 
+ 	assert_equal "Projects", find('.navbar ul li.active a').text
+
+ 	visit "/projects"
+ 	click_link 'Project 1'
  	assert_equal "Projects", find('.navbar ul li.active a').text
  end
 
