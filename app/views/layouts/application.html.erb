@@ -21,10 +21,25 @@
 					<li class = "<%= 'active' if ((current_page? projects_path) || (params[:id])) %>">
 						<%= link_to 'Projects', :projects %>
 					</li>
+					<% if current_user %>
+						<li class = "<%= 'active' if current_page? new_user_path %>">
+							<%= link_to 'Logout', :sessions_destroy %>
+						</li>
+					<% else %>
+						<li class = "<%= 'active' if current_page? new_user_path %>">
+							<%= link_to 'Sign Up', :new_user %>
+						</li>
+					<% end %>
+					<li class = "<%= 'active' if current_page? sessions_new_path %>">
+						<%= link_to 'Login',:sessions_new %>
+					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
+	<% if flash[:notice] %>
+		<p id = "notice"><%= flash[:notice] %></p>
+	<% end %>
 <%= yield %>
 
 </body>

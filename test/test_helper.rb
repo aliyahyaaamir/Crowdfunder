@@ -18,8 +18,9 @@ class ActionDispatch::IntegrationTest
 
 	Capybara.app = Crowdfunder::Application
 
+
 	teardown do
 		Capybara.reset_sessions!
-		Capybara.user_default_driver
+		Capybara.use_default_driver
 	end
 end

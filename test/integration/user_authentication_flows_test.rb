@@ -14,7 +14,7 @@ class UserAuthenticationFlowsTest < ActionDispatch::IntegrationTest
 		fill_in "user[email]", :with => user.email
 		fill_in "user[first_name]", :with => user.first_name
 		fill_in "user[last_name]", :with => user.last_name
-		fill_in "user[password", :with => user.password
+		fill_in "user[password]", :with => user.password
 		click_button "Create Account"
 
 		assert_equal root_path, current_path
