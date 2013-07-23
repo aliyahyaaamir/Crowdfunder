@@ -2,6 +2,9 @@
 
 <%= form_for @user do |f| %>
 	<% if @user.errors.any? %>
+		<div>
+			<h3 class = "alert">Try again</h3>
+		</div>
 		<div class = "error_messages">
 			<h2>Form is invalid</h2>
 			<ul>
