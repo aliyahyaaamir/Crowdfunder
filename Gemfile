@@ -34,6 +34,9 @@ end
 group :test do 
   gem "factory_girl_rails" 
   gem "capybara" # needed for our integration tests, which we'll talk about more later
+
+  gem "database_cleaner"
+  gem "capybara-webkit", '~> 1.0.0'
 end
 
 # To use ActiveModel has_secure_password
