@@ -13,7 +13,7 @@ class PledgeTest < ActiveSupport::TestCase
 	test "requires a project" do
 		pledge = FactoryGirl.build(:pledge, project: nil)
 
-		assert_flase pledge.save
+		assert_false pledge.save
 		assert_equal "can't be blank", pledge.errors[:project].first
 	end
 
