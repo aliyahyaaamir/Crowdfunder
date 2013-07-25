@@ -1,1 +1,7 @@
 <h1><%= @project.title %></h1>
+
+<% if current_user %>
+	<%= link_to 'Back This Project', new_project_pledge_path(@project) %>
+<% else %>
+	<%= link_to 'Back This Project', new_project_pledge_path(@project) %>
+<% end %>

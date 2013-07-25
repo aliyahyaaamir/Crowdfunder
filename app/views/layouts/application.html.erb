@@ -30,8 +30,9 @@
 							<%= link_to 'Sign Up', :new_user %>
 						</li>
 					<% end %>
-					<li class = "<%= 'active' if current_page? sessions_new_path %>">
-						<%= link_to 'Login',:sessions_new %>
+
+					<li class = "<%= 'active' if current_page? new_session_path %>">
+						<%= link_to 'Login',:new_session %>
 					</li>
 				</ul>
 			</div>

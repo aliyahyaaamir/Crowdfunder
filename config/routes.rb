@@ -1,17 +1,16 @@
 Crowdfunder::Application.routes.draw do
 
-  get "sessions/new"
+get '/sessions/destroy'
 
-  get "sessions/create"
-
-  get "sessions/destroy"
-
-resources :projects
-
+resources :projects do
+	resources :pledges
+end
+ 
 root :to => "welcome#index"
 
 resources :users
 
 resources :sessions, :only => [:new, :create, :destroy]
+
 
 end
