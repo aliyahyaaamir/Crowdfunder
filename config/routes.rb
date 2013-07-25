@@ -3,7 +3,7 @@ Crowdfunder::Application.routes.draw do
 get '/sessions/destroy'
 
 resources :projects do
-	resources :pledges
+	resources :pledges, only: [:new, :create]
 end
  
 root :to => "welcome#index"
