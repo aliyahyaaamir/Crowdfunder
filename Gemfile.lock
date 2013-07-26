@@ -88,6 +88,8 @@ GEM
       multi_json (>= 1.5)
     launchy (2.1.2)
       addressable (~> 2.3)
+    letter_opener (1.0.0)
+      launchy (>= 2.0.4)
     listen (1.2.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -190,6 +192,7 @@ DEPENDENCIES
   guard-test
   jquery-rails
   launchy
+  letter_opener
   pg
   pry-rails
   rails (= 3.2.13)
