@@ -21,6 +21,12 @@
 					<li class = "<%= 'active' if ((current_page? projects_path) || (params[:id])) %>">
 						<%= link_to 'Projects', :projects %>
 					</li>
+
+					<% if current_user %>
+						<li class = "<%= 'active' if (current_page? my_projects_path) || (current_page?new_my_project_path) %>">
+						<%= link_to 'My Projects', :my_projects %>
+					<% end %> 
+
 					<% if current_user %>
 						<li class = "<%= 'active' if current_page? new_user_path %>">
 							<%= link_to 'Logout', :sessions_destroy %>
@@ -30,9 +36,10 @@
 							<%= link_to 'Sign Up', :new_user %>
 						</li>
 					<% end %>
-
+					<% if !(current_user) %>
 					<li class = "<%= 'active' if current_page? new_session_path %>">
 						<%= link_to 'Login',:new_session %>
+					<% end %>
 					</li>
 				</ul>
 			</div>
