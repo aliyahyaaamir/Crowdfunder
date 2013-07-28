@@ -18,6 +18,7 @@ class PledgesController < ApplicationController
   	@pledge.project_id = params[:project_id]
 
   	if @pledge.save
+      UserMailer.new_pledge(@pledge).deliver
   		redirect_to project_path(@project), :notice => "Thanks for pledging"
   	else
   		render "new"

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+	</head>
+	<body>
+		<h1>Welcome to Crowdfunder.com, <%= @user.first_name %></h1>
+		<p>
+			You have successfully signed up to CrowdFunder.com,
+			your email is: <%= @user.email %>.<br/>
+			Your contribution of <%= @pledge.amount %> is greatly appreciated! <br/>
+		</p>
+		<p>
+			To login to the site, just follow this link: <%= @url %>
+		</p>
+		<p>Thanks for signing up! Have a great day!</p>
+	</body>
+</html>
