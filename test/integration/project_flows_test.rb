@@ -48,4 +48,27 @@ class ProjectFlowsTest < ActionDispatch::IntegrationTest
  	page.assert_selector '.navbar ul li.active a', count: 1
  end
 
+test "pagination" do
+	user = FactoryGirl.create :user
+	50.times { |i| FactoryGirl.create(:project, title: "Project #{i}", user: user) }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end
